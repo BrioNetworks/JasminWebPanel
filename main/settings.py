@@ -65,6 +65,16 @@ if db_engine == 'postgres':
             "PASSWORD": os.environ.get('DB_PASSWORD')
         }
     }
+elif db_engine == 'mysql':
+    DATABASES = {
+        'default': {
+            "NAME": os.environ.get('DB_NAME', 'jasmin-smpp'),
+            "HOST": os.environ.get('DB_HOST'),
+            "ENGINE": "django.db.backends.mysql",
+            "USER": os.environ.get('DB_USER'),
+            "PASSWORD": os.environ.get('DB_PASSWORD')
+        }
+    }
 else:
     DATABASES = {
         'default': {
