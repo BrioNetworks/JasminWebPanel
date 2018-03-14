@@ -173,6 +173,8 @@ $(function() {
 		});
 	});
 	$('.selectpicker').selectpicker({
+		container: 'body',
+                dropupAuto: false,
 		style: 'btn-info',
 		size: 4
 	});
